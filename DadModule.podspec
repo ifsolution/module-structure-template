@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
-  s.name = "Dad"
+  s.name = "DadModule"
   s.version = "0.1.0"
-  s.summary = "A short description of Dad."
+  s.summary = "A short description of DadModule."
 
   s.description = <<-DESC
 TODO: Add long description of the pod here.
                   DESC
 
-  s.homepage = "https://github.com/congncif/Dad"
+  s.homepage = "https://github.com/congncif/app-father"
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.author = { "NGUYEN CHI CONG" => "congnc.if@gmail.com" }
   s.source = { :git => "git@github.com:ifsolution/father.git", :tag => s.version.to_s }
@@ -21,7 +21,7 @@ TODO: Add long description of the pod here.
   s.source_files = "Sources/**/*.swift"
   # s.resources = "Sources/**/*.{xib,storyboard,strings,xcassets}"
 
-  s.dependency "DadIO"
+  s.dependency "DadModuleIO"
   s.dependency "DadFoundation"
   # s.dependency "ViewStateCore"
 
