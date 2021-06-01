@@ -46,7 +46,7 @@ extension __DAD__Activation: __DAD__Activatable {
 // MARK: - Quick Access
 
 extension ActivatableBoard {
-    public func <#__DAD__#>(identifier: BoardID) -> __DAD__Activatable {
+    public func __dad__(identifier: BoardID) -> __DAD__Activatable {
         switch self {
         case let main as MotherboardType:
             return __DAD__MainActivation(identifier: identifier, mainboard: main)
