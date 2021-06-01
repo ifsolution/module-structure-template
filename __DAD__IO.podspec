@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
-  s.name = "DadModuleIO"
+  s.name = "__DAD__IO"
   s.version = "0.1.0"
-  s.summary = "A short description of DadModuleIO."
+  s.summary = "A short description of __DAD__IO."
 
   s.description = <<-DESC
   TODO: Add long description of the pod here.
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage = "https://github.com/congncif/app-father"
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.author = { "NGUYEN CHI CONG" => "congnc.if@gmail.com" }
-  s.source = { :git => "git@github.com:ifsolution/DadModule.git", :tag => s.version.to_s }
+  s.source = { :git => "git@github.com:ifsolution/__DAD__.git", :tag => s.version.to_s }
   s.social_media_url = "https://twitter.com/congncif"
 
   s.ios.deployment_target = "10.0"
