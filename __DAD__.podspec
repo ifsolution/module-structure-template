@@ -16,7 +16,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = "10.0"
   s.swift_versions = ["5.3", "5.4"]
 
-  s.static_framework = true
+  # s.static_framework = true
 
   s.source_files = "Sources/**/*.swift"
   # s.resources = "Sources/**/*.{xib,storyboard,strings,xcassets}"
