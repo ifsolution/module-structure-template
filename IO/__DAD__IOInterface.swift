@@ -15,17 +15,17 @@ public enum __DAD__Input {
 
 public enum __DAD__Output {}
 
+// MARK: - Activations
+
 public protocol __DAD__Activatable {
     func activate(with input: __DAD__Input)
 }
 
-extension ___VARIABLE_moduleName___Activatable {
+extension __DAD__Activatable {
     public func activate() {
         activate(with: .none)
     }
 }
-
-// MARK: - Activations
 
 /// For Motherboard call
 struct __DAD__MainActivation {
@@ -51,6 +51,23 @@ extension __DAD__Activation: __DAD__Activatable {
     }
 }
 
+// MARK: - Handler
+
+public protocol __DAD__OutputHandling {
+    func addTarget<Target: AnyObject>(_ target: Target, action: @escaping (Target, __DAD__Output) -> Void)
+}
+
+struct __DAD__OutputHandler {
+    let identifier: BoardID
+    let mainboard: FlowManageable
+}
+
+extension __DAD__OutputHandler: __DAD__OutputHandling {
+    func addTarget<Target: AnyObject>(_ target: Target, action: @escaping (Target, __DAD__Output) -> Void) {
+        mainboard.registerFlow(matchedIdentifiers: identifier, target: target, uniqueOutputType: __DAD__Output.self, nextHandler: action)
+    }
+}
+
 // MARK: - Quick Access
 
 extension ActivatableBoard {
@@ -61,5 +78,11 @@ extension ActivatableBoard {
         default:
             return __DAD__Activation(identifier: identifier, source: self)
         }
+    }
+}
+
+extension FlowManageable {
+    public func __dad__Handler(identifier: BoardID) -> __DAD__OutputHandling {
+        return __DAD__OutputHandler(identifier: identifier, mainboard: self)
     }
 }
