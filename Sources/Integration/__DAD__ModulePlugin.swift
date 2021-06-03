@@ -18,7 +18,10 @@ public struct __DAD__ModulePlugin: ModulePlugin {
     }
 
     public func apply(for main: MainComponent) {
-        let module = __DAD__ModuleLoader(identifier: identifier)
-        module.load(in: main)
+        main.registerBoard(identifier) { id in
+            let producer = __DAD__BoardProducer()
+            let mainboard = Motherboard(identifier: "<#domain.root.main#>", boardProducer: producer)
+            return RootBoard(identifier: id, continuousBoard: mainboard)
+        }
     }
 }

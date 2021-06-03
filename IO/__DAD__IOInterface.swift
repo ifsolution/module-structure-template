@@ -9,12 +9,20 @@
 import Boardy
 import Foundation
 
-public enum __DAD__Input {}
+public enum __DAD__Input {
+    case none
+}
 
 public enum __DAD__Output {}
 
 public protocol __DAD__Activatable {
     func activate(with input: __DAD__Input)
+}
+
+extension ___VARIABLE_moduleName___Activatable {
+    public func activate() {
+        activate(with: .none)
+    }
 }
 
 // MARK: - Activations
