@@ -5,6 +5,7 @@
 //  Created by NGUYEN CHI CONG on 5/31/21.
 //
 
+/*
 import Foundation
 import SwiftMessages
 
@@ -52,3 +53,4 @@ enum MessageCenter {
         SwiftMessages.show(view: view)
     }
 }
+*/
