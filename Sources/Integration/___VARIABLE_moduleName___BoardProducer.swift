@@ -1,6 +1,6 @@
 //
-//  __DAD__BoardProducer.swift
-//  Dad
+//  ___VARIABLE_moduleName___BoardProducer.swift
+//  ___VARIABLE_moduleName___
 //
 //  Created by NGUYEN CHI CONG on 6/1/21.
 //  
@@ -9,9 +9,9 @@
 import Boardy
 import Foundation
 
-struct __DAD__BoardProducer: ActivableBoardProducer {
+struct ___VARIABLE_moduleName___BoardProducer: ActivableBoardProducer {
     let externalProducer: BoardDynamicProducer
-    let identifierExtensions: __DAD__IDExtensions
+    let identifierExtensions: ___VARIABLE_moduleName___IDExtensions
 
     func produceBoard(identifier: BoardID) -> ActivatableBoard? {
         switch identifier {
