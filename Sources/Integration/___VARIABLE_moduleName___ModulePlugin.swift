@@ -27,7 +27,7 @@ public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
     public func apply(for main: MainComponent) {
         let mainProducer = main.producer
         mainProducer.registerBoard(identifier) { identifier in
-            let producer = ___VARIABLE_moduleName___BoardProducer(externalProducer: mainProducer, identifierExtensions: identifierExtensions)
+            let producer = ___VARIABLE_moduleName___BoardProducer(externalProducer: mainProducer, externalIDs: identifierExtensions)
             let mainboard = Motherboard(identifier: "___VARIABLE_moduleName___.root.main", boardProducer: producer)
             return RootBoard(identifier: identifier, continuousBoard: mainboard)
         }
