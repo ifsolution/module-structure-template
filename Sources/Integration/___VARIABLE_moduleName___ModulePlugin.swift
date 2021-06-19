@@ -27,10 +27,11 @@ public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
     public func apply(for main: MainComponent) {
         let mainProducer = main.producer
         let externalIDs = identifierExtensions
-        let mainboard = Motherboard(identifier: "___VARIABLE_moduleName___.root.main", externalProducer: mainProducer) { producer in
-            // <#BoardRegistration#>
-        }
-        mainProducer.registerBoard(identifier) { identifier in
+        
+        mainProducer.registerBoard(identifier) { [unowned mainProducer] identifier in
+            let mainboard = Motherboard(identifier: "___VARIABLE_moduleName___.root.main", externalProducer: mainProducer) { producer in
+                // <#BoardRegistration#>
+            }
             return RootBoard(identifier: identifier, continuousBoard: mainboard)
         }
     }
