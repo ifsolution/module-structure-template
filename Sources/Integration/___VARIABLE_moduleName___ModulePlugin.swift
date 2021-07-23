@@ -11,15 +11,15 @@ import Boardy
 import DadFoundation
 import Foundation
 
-public struct ___VARIABLE_moduleName___IDExtensions {
-    public init() {}
-}
-
 public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
-    public let identifier: BoardID
-    public let identifierExtensions: ___VARIABLE_moduleName___IDExtensions
+    public struct IDExtensions {
+        public init() {}
+    }
 
-    public init(identifier: BoardID, identifierExtensions: ___VARIABLE_moduleName___IDExtensions = ___VARIABLE_moduleName___IDExtensions()) {
+    public let identifier: BoardID
+    public let identifierExtensions: ___VARIABLE_moduleName___ModulePlugin.IDExtensions
+
+    public init(identifier: BoardID, identifierExtensions: ___VARIABLE_moduleName___ModulePlugin.IDExtensions = .init()) {
         self.identifier = identifier
         self.identifierExtensions = identifierExtensions
     }

@@ -23,7 +23,6 @@ TODO: Add long description of the pod here.
 
   s.dependency "__DAD__IO"
   s.dependency "DadFoundation"
-  # s.dependency "ViewStateCore"
 
   s.dependency "SiFUtilities"
   # s.dependency "SwiftMessages"
