@@ -6,20 +6,22 @@
 //  
 //
 
-
 import Boardy
 import DadFoundation
 import Foundation
+import ___VARIABLE_moduleName___IO
 
 public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
-    public struct IDExtensions {
-        public init() {}
-    }
-
+    // public var identifier: BoardID {
+    //     switch serviceType {
+    //     case let .some(identifier):
+    //         return identifier
+    //     }
+    // }
     public let identifier: BoardID
     public let identifierExtensions: ___VARIABLE_moduleName___ModulePlugin.IDExtensions
 
-    public init(identifier: BoardID, identifierExtensions: ___VARIABLE_moduleName___ModulePlugin.IDExtensions = .init()) {
+    public init(identifier: BoardID = ___VARIABLE_moduleName___Namespace.default, identifierExtensions: ___VARIABLE_moduleName___ModulePlugin.IDExtensions = .init()) {
         self.identifier = identifier
         self.identifierExtensions = identifierExtensions
     }
@@ -35,4 +37,16 @@ public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
             return RootBoard(identifier: identifier, continuousBoard: mainboard)
         }
     }
+
+    public struct IDExtensions {
+        public init() {}
+    }
+
+    // public enum ServiceType {
+    //     case some(BoardID)
+        
+    //     static var some: ServiceType {
+    //         .some("someID")
+    //     }
+    // }
 }

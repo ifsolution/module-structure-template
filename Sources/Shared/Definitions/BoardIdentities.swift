@@ -8,4 +8,6 @@
 import Boardy
 import Foundation
 
-extension BoardID {}
+extension BoardID {
+    // static let some: BoardID = "someID"
+}

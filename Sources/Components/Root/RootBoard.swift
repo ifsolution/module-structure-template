@@ -16,9 +16,13 @@ final class RootBoard: ContinuousBoard, GuaranteedBoard {
         registerFlows()
     }
 
-    func activate(withGuaranteedInput input: InputType) {}
+    func activate(withGuaranteedInput input: InputType) {
+        // <#code#>
+    }
 }
 
 private extension RootBoard {
-    func registerFlows() {}
+    func registerFlows() {
+        // <#code#>
+    }
 }
