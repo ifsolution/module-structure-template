@@ -36,7 +36,7 @@ public struct ___VARIABLE_moduleName___MainDestination {
 }
 
 extension MotherboardType where Self: FlowManageable {
-    public func io___VARIABLE_moduleName___(_ identifier: BoardID = ___VARIABLE_moduleName___Namespace.default) -> ___VARIABLE_module___VARIABLE_moduleName___MainDestination {
+    public func io___VARIABLE_moduleName___(_ identifier: BoardID = ___VARIABLE_moduleName___Namespace.default) -> ___VARIABLE_moduleName___MainDestination {
         ___VARIABLE_moduleName___MainDestination(
             activation: activation(identifier, with: ___VARIABLE_moduleName___Input.self),
             interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self),
