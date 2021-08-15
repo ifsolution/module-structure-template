@@ -31,7 +31,7 @@ public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
         let externalIDs = identifierExtensions
         
         mainProducer.registerBoard(identifier) { [unowned mainProducer] identifier in
-            let mainboard = Motherboard(identifier: "___VARIABLE_moduleName___.root.main", externalProducer: mainProducer) { producer in
+            let mainboard = Motherboard(identifier: identifier.appending("main"), externalProducer: mainProducer) { producer in
                 // <#BoardRegistration#>
             }
             return RootBoard(identifier: identifier, continuousBoard: mainboard)

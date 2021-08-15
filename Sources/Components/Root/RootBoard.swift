@@ -8,8 +8,9 @@
 import Boardy
 import Foundation
 
-final class RootBoard: ContinuousBoard, GuaranteedBoard {
+final class RootBoard: ContinuousBoard, GuaranteedBoard, GuaranteedOutputSendingBoard {
     typealias InputType = Any
+    typealias OutputType = Any
 
     init(identifier: BoardID, continuousBoard: FlowMotherboard) {
         super.init(identifier: identifier, motherboard: continuousBoard)
