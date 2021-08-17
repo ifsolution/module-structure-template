@@ -22,9 +22,10 @@ TODO: Add long description of the pod here.
   # s.resources = "Sources/**/*.{xib,storyboard,strings,xcassets}"
 
   s.dependency "__DAD__IO"
-  s.dependency "DadFoundation"
 
+  s.dependency "DadFoundation"
   s.dependency "SiFUtilities"
+  
   # s.dependency "SwiftMessages"
 
   # s.dependency "Firebase/Storage"

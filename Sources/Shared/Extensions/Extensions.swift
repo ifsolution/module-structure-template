@@ -24,27 +24,6 @@ extension UIImage {
     }
 }
 
-extension Numeric {
-    public func decimalFormatted(separator: String? = nil) -> String {
-        let separator = separator ?? Locale.current.decimalSeparator ?? ","
-        return NumberFormatter(decimalSeparator: separator).string(for: self) ?? "\(self)"
-    }
-}
-
-extension NumberFormatter {
-    public convenience init(decimalSeparator: String) {
-        self.init()
-        self.groupingSeparator = decimalSeparator
-        self.numberStyle = .decimal
-    }
-}
-
-extension Locale {
-    public static var vietnam: Locale {
-        return Locale(identifier: "vn_VN")
-    }
-}
-
 func feedbackHaptic() {
     let haptic = UISelectionFeedbackGenerator()
     haptic.prepare()
@@ -58,7 +37,7 @@ func notificationHaptic(_ type: UINotificationFeedbackGenerator.FeedbackType) {
 }
 
 extension NSError {
-    static func general(domain: String = "mod.general",
+    static func general(domain: String = "general.custom-error",
                         code: Int = NSURLErrorUnknown,
                         message: String) -> NSError {
         NSError(domain: domain, code: code, userInfo: [NSLocalizedDescriptionKey: message])
