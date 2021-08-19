@@ -12,13 +12,8 @@ import Foundation
 import ___VARIABLE_moduleName___IO
 
 public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
-    // public var identifier: BoardID {
-    //     switch serviceType {
-    //     case let .some(identifier):
-    //         return identifier
-    //     }
-    // }
     public let identifier: BoardID
+    // public let serviceType: ___VARIABLE_moduleName___ModulePlugin.ServiceType
     public let identifierExtensions: ___VARIABLE_moduleName___ModulePlugin.IDExtensions
 
     public init(identifier: BoardID = ___VARIABLE_moduleName___Namespace.default, identifierExtensions: ___VARIABLE_moduleName___ModulePlugin.IDExtensions = .init()) {
@@ -42,11 +37,20 @@ public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
         public init() {}
     }
 
-    // public enum ServiceType {
-    //     case some(BoardID)
-        
-    //     static var some: ServiceType {
-    //         .some("someID")
+    // public var identifier: BoardID {
+    //     switch serviceType {
+    //     case let .some(identifier):
+    //         return identifier
     //     }
     // }
+
+    // public enum ServiceType {
+    //     case some(BoardID)
+    // }
+}
+
+extension ___VARIABLE_moduleName___ModulePlugin {
+    public static var bundledPlugins: [ModulePlugin] {
+        [___VARIABLE_moduleName___ModulePlugin()]
+    }
 }
