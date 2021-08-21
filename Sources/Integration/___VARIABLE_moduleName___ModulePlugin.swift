@@ -14,16 +14,18 @@ import ___VARIABLE_moduleName___IO
 public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
     public let identifier: BoardID
     // public let serviceType: ___VARIABLE_moduleName___ModulePlugin.ServiceType
-    public let identifierExtensions: ___VARIABLE_moduleName___ModulePlugin.IDExtensions
+    // public let identifierExtensions: ___VARIABLE_moduleName___ModulePlugin.IDExtensions
 
-    public init(identifier: BoardID = ___VARIABLE_moduleName___Namespace.default, identifierExtensions: ___VARIABLE_moduleName___ModulePlugin.IDExtensions = .init()) {
+    public init(identifier: BoardID = ___VARIABLE_moduleName___Namespace.default) {
+                // identifierExtensions: ___VARIABLE_moduleName___ModulePlugin.IDExtensions = .init()) {
         self.identifier = identifier
-        self.identifierExtensions = identifierExtensions
+        // self.serviceType = serviceType
+        // self.identifierExtensions = identifierExtensions
     }
 
     public func apply(for main: MainComponent) {
         let mainProducer = main.producer
-        let externalIDs = identifierExtensions
+        // let externalIDs = identifierExtensions
         
         mainProducer.registerBoard(identifier) { [unowned mainProducer] identifier in
             let mainboard = Motherboard(identifier: identifier.appending("main"), externalProducer: mainProducer) { producer in
@@ -33,9 +35,11 @@ public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
         }
     }
 
-    public struct IDExtensions {
-        public init() {}
-    }
+    /// Use IDExtensions when you would like to match internal BoardID with external BoardID from external producer.
+    /// This make Internal Producer to be able produce external-defined Board with internal identifier.
+    // public struct IDExtensions {
+    //     public init() {}
+    // }
 
     // public var identifier: BoardID {
     //     switch serviceType {
