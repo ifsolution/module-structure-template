@@ -27,6 +27,7 @@ TODO: Add long description of the pod here.
   s.dependency "SiFUtilities"
   
   # s.dependency "SwiftMessages"
+  # s.dependency "Localize-Swift/LocalizeSwiftCore"
 
   # s.dependency "Firebase/Storage"
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => '"${PODS_ROOT}/Firebase/CoreOnly/Sources"' }
