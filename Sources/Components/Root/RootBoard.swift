@@ -7,13 +7,14 @@
 
 import Boardy
 import Foundation
+import ___VARIABLE_moduleName___IO
 
-final class RootBoard: ContinuousBoard, GuaranteedBoard, GuaranteedOutputSendingBoard {
-    typealias InputType = Any
-    typealias OutputType = Any
+final class RootBoard: ModernContinuableBoard, GuaranteedBoard, GuaranteedOutputSendingBoard {
+    typealias InputType = ___VARIABLE_moduleName___Input
+    typealias OutputType = ___VARIABLE_moduleName___Output
 
-    init(identifier: BoardID, continuousBoard: FlowMotherboard) {
-        super.init(identifier: identifier, motherboard: continuousBoard)
+    init(identifier: BoardID, producer: ActivableBoardProducer) {
+        super.init(identifier: identifier, boardProducer: producer)
         registerFlows()
     }
 

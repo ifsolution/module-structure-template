@@ -8,7 +8,7 @@
 
 import Boardy
 import Foundation
-import ___VARIABLE_moduleName___IO
+import __DAD__IO
 
 public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
     public let identifier: BoardID
@@ -27,10 +27,9 @@ public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
         // let externalIDs = identifierExtensions
         
         mainProducer.registerBoard(identifier) { [unowned mainProducer] identifier in
-            let mainboard = Motherboard(identifier: identifier.appending("main"), externalProducer: mainProducer) { producer in
-                // <#BoardRegistration#>
-            }
-            return RootBoard(identifier: identifier, continuousBoard: mainboard)
+            return RootBoard(identifier: identifier, producer: BoardProducer(externalProducer: mainProducer, registrationsBuilder: { producer in
+                // <#registration code#>
+            }))
         }
     }
 
