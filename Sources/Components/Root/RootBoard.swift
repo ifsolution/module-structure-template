@@ -7,7 +7,7 @@
 
 import Boardy
 import Foundation
-import ___VARIABLE_moduleName___IO
+import __DAD__IO
 
 final class RootBoard: ModernContinuableBoard, GuaranteedBoard, GuaranteedOutputSendingBoard {
     typealias InputType = ___VARIABLE_moduleName___Input
