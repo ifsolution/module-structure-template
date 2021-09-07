@@ -10,12 +10,12 @@ import Foundation
 private class BundleToken {}
 
 extension Bundle {
-    static var local: Bundle { Bundle(for: BundleToken.self) }
+    static var framework: Bundle { Bundle(for: BundleToken.self) }
 }
 
 extension UIImage {
     convenience init?(xcnamed: String) {
-        self.init(named: xcnamed, in: .local, compatibleWith: nil)
+        self.init(named: xcnamed, in: .framework, compatibleWith: nil)
     }
 
     static func from(xcnamed: String) -> UIImage? {
