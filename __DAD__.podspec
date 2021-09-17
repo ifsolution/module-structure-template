@@ -7,9 +7,9 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                   DESC
 
-  s.homepage = "https://github.com/congncif/app-father"
+  s.homepage = "https://github.com/ifsolution"
   s.license = { :type => "MIT", :file => "LICENSE" }
-  s.author = { "NGUYEN CHI CONG" => "congnc.if@gmail.com" }
+  s.author = { "[iF] Solution" => "solution.if@gmail.com" }
   s.source = { :git => "git@github.com:ifsolution/__DAD__.git", :tag => s.version.to_s }
   s.social_media_url = "https://twitter.com/congncif"
 

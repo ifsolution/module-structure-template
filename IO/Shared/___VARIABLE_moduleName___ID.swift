@@ -2,7 +2,7 @@
 //  ___VARIABLE_moduleName___ID.swift
 //  ___VARIABLE_moduleName___
 //
-//  Created by NGUYEN CHI CONG on 6/1/21.
+//  Created by Boardy on 6/1/21.
 //  
 //
 
