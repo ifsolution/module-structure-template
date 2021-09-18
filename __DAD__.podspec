@@ -13,7 +13,7 @@ TODO: Add long description of the pod here.
   s.source = { :git => "git@github.com:ifsolution/__DAD__.git", :tag => s.version.to_s }
   s.social_media_url = "https://twitter.com/congncif"
 
-  s.ios.deployment_target = "10.0"
+  s.ios.deployment_target = "11.0"
   s.swift_versions = ["5.3", "5.4"]
 
   # s.static_framework = true

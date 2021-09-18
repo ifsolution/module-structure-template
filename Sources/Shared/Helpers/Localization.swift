@@ -8,5 +8,5 @@
 // import Localize_Swift
 
 // func localizedString(_ key: String, _ tableName: String?) -> String {
-//     key.localized(using: tableName, in: .local)
+//     key.localized(using: tableName, in: .framework)
 // }
