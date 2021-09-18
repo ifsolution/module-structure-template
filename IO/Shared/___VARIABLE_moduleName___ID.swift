@@ -6,6 +6,8 @@
 //  
 //
 
+import Boardy
+
 public enum ___VARIABLE_moduleName___ID {
     public static let `default`: BoardID = .pub___VARIABLE_moduleName___
 }
