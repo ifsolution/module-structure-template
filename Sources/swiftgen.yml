@@ -8,3 +8,11 @@ strings:
         enumName: Strings
         publicAccess: false
         lookupFunction: localizedString
+xcassets:
+  inputs:
+    - Resources/Checkout.xcassets
+  outputs:
+    - templateName: swift5
+      output: Generated/Assets.swift
+      params:
+        publicAccess: false
