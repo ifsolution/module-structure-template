@@ -15,4 +15,5 @@ xcassets:
     - templateName: swift5
       output: Generated/Assets.swift
       params:
+        enumName: Assets
         publicAccess: false
