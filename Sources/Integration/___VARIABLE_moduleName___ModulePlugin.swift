@@ -27,7 +27,7 @@ public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
         switch service {
         case .default:
             mainProducer.registerBoard(identifier) { identifier in
-                RootBoard(identifier: identifier, producer: continuousProducer)
+                RootBoardFactory.make(identifier: identifier, producer: continuousProducer)
             }
         }
     }

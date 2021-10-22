@@ -1,30 +1,20 @@
 //
 //  RootBoard.swift
-//  Modular
+//  ___VARIABLE_moduleName___
 //
-//  Created by BOARDY on 5/31/21.
+//  Created by BOARDY on 10/22/21.
+//  
 //
 
 import Boardy
 import Foundation
-import __DAD__IO
 
-final class RootBoard: ModernContinuableBoard, GuaranteedBoard, GuaranteedOutputSendingBoard {
-    typealias InputType = ___VARIABLE_moduleName___Input
-    typealias OutputType = ___VARIABLE_moduleName___Output
-
-    init(identifier: BoardID, producer: ActivableBoardProducer) {
-        super.init(identifier: identifier, boardProducer: producer)
-        registerFlows()
-    }
-
-    func activate(withGuaranteedInput input: InputType) {
-        // <#code#>
-    }
-}
-
-private extension RootBoard {
-    func registerFlows() {
-        // <#code#>
+enum RootBoardFactory {
+    static func make(identifier: BoardID, producer: ActivableBoardProducer) -> ActivatableBoard {
+        FlowBoard<RootInput, RootOutput>(identifier: identifier, producer: producer) { it in
+            <#register flows#>
+        } flowActivation: { it, input in
+            <#activate#>
+        }
     }
 }
