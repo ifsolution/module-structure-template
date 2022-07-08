@@ -11,11 +11,11 @@ import Foundation
 import __DAD__IO
 
 enum ___VARIABLE_moduleName___BoardFactory {
-    static func make(identifier: BoardID, producer: ActivableBoardProducer) -> ActivatableBoard {
+    static func make(identifier: BoardID, producer: ActivatableBoardProducer) -> ActivatableBoard {
         FlowBoard<___VARIABLE_moduleName___Input, ___VARIABLE_moduleName___Output, ___VARIABLE_moduleName___Command, ___VARIABLE_moduleName___Action>(identifier: identifier, producer: producer) { it in
-            <#register flows#>
+            // <#register flows#>
         } flowActivation: { it, input in
-            <#activate#>
+            // <#activate#>
         }
     }
 }
