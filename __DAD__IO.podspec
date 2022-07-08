@@ -10,11 +10,11 @@ Pod::Spec.new do |s|
   s.homepage = "https://github.com/ifsolution"
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.author = { "[iF] Solution" => "solution.if@gmail.com" }
-  s.source = { :git => "git@github.com:ifsolution/__DAD__.git", :tag => s.version.to_s }
+  s.source = { :git => "https://github.com/ifsolution/__DAD__.git", :tag => s.version.to_s }
   s.social_media_url = "https://twitter.com/congncif"
 
   s.ios.deployment_target = "11.0"
-  s.swift_versions = ["5.3", "5.4"]
+  s.swift_version = "5"
 
   s.source_files = "IO/**/*.swift"
 
