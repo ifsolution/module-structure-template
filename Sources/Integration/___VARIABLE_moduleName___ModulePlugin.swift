@@ -11,6 +11,10 @@ import Boardy
 import Foundation
 
 public struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
+    public var identifier: Boardy.BoardID {
+        service.identifier
+    }
+
     public let service: ___VARIABLE_moduleName___ModulePlugin.ServiceType
 
     public init(service: ___VARIABLE_moduleName___ModulePlugin.ServiceType) {
