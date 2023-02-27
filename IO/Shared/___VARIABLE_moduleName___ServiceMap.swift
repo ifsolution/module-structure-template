@@ -9,24 +9,19 @@
 import Boardy
 import Foundation
 
-public struct ___VARIABLE_moduleName___ServiceMap {
-    let base: FlowMotherboard
-
-    public var `default`: DefaultMap {
-        DefaultMap(base: base)
-    }
-
-    public struct DefaultMap {
-        let base: FlowMotherboard
-
-        /// List of provided services here
+/// List of provided services here
+public extension ___VARIABLE_moduleName___ServiceMap {
+    var `default`: ___VARIABLE_moduleName___MainDestination {
+        mainboard.io___VARIABLE_moduleName___()
     }
 }
 
-// MARK: - Extensions
+public struct ___VARIABLE_moduleName___ServiceMap {
+    let mainboard: FlowMotherboard
+}
 
-public extension MotherboardType where Self: FlowManageable {
+public extension ServiceMap {
     var ___VARIABLE_serviceMap___: ___VARIABLE_moduleName___ServiceMap {
-        ___VARIABLE_moduleName___ServiceMap(base: self)
+        ___VARIABLE_moduleName___ServiceMap(mainboard: mainboard)
     }
 }

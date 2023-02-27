@@ -12,7 +12,7 @@ import Foundation
 // MARK: - ID
 
 public extension BoardID {
-    static let pub___VARIABLE_moduleName___: BoardID = "pub.mod.___VARIABLE_moduleName___"   
+    static let pub___VARIABLE_moduleName___: BoardID = "pub.mod.___VARIABLE_moduleName___IO.default"
 }
 
 // MARK: - Interface
