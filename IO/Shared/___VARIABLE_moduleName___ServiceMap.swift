@@ -16,12 +16,8 @@ public extension ___VARIABLE_moduleName___ServiceMap {
     }
 }
 
-public struct ___VARIABLE_moduleName___ServiceMap {
-    let mainboard: FlowMotherboard
-}
+public final class ___VARIABLE_moduleName___ServiceMap: ServiceMap {}
 
 public extension ServiceMap {
-    var ___VARIABLE_serviceMap___: ___VARIABLE_moduleName___ServiceMap {
-        ___VARIABLE_moduleName___ServiceMap(mainboard: mainboard)
-    }
+    var ___VARIABLE_serviceMap___: ___VARIABLE_moduleName___ServiceMap { link() }
 }
