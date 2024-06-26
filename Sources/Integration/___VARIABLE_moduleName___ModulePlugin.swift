@@ -3,7 +3,7 @@
 //  ___VARIABLE_moduleName___
 //
 //  Created by BOARDY on 6/1/21.
-//
+//  Compatible with Boardy 1.54 or later
 //
 
 import __DAD__IO
