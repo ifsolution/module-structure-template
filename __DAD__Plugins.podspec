@@ -21,7 +21,7 @@ TODO: Add long description of the pod here.
   s.source_files = "Sources/**/*.swift"
   # s.resources = "Sources/**/*.{xib,storyboard,strings,xcassets}"
 
-  s.dependency "__DAD__IO"
+  s.dependency "__DAD__"
 
   s.dependency "Boardy/ModulePlugin"
   s.dependency "SiFUtilities"
