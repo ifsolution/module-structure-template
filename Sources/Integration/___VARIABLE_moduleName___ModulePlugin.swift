@@ -6,7 +6,7 @@
 //  Compatible with Boardy 1.54 or later
 //
 
-import __DAD__IO
+import __DAD__
 import Boardy
 import Foundation
 

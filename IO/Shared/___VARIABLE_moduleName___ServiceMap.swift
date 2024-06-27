@@ -10,14 +10,14 @@ import Boardy
 import Foundation
 
 /// List of provided services here
-public extension __DAD__IOServiceMap {
+public extension __DAD__ServiceMap {
     var `default`: ___VARIABLE_moduleName___MainDestination {
         mainboard.io___VARIABLE_moduleName___()
     }
 }
 
-public final class __DAD__IOServiceMap: ServiceMap {}
+public final class __DAD__ServiceMap: ServiceMap {}
 
 public extension ServiceMap {
-    var ___VARIABLE_serviceMap___: __DAD__IOServiceMap { link() }
+    var ___VARIABLE_serviceMap___: __DAD__ServiceMap { link() }
 }

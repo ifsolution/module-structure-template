@@ -8,7 +8,7 @@
 
 import Boardy
 import Foundation
-import __DAD__IO
+import __DAD__
 
 enum ___VARIABLE_moduleName___BoardFactory {
     static func make(identifier: BoardID, producer: ActivatableBoardProducer) -> ActivatableBoard {
