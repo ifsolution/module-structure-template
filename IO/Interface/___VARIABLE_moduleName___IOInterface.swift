@@ -26,7 +26,7 @@ public struct ___VARIABLE_moduleName___Destination {
 }
 
 extension ActivatableBoard {
-    public func io___VARIABLE_moduleName___(_ identifier: BoardID = ___VARIABLE_moduleName___Destination.defaultIdentifier) -> ___VARIABLE_moduleName___Destination {
+    func io___VARIABLE_moduleName___(_ identifier: BoardID = ___VARIABLE_moduleName___Destination.defaultIdentifier) -> ___VARIABLE_moduleName___Destination {
         ___VARIABLE_moduleName___Destination(
             activation: activation(identifier, with: ___VARIABLE_moduleName___Parameter.self),
             interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self),
@@ -47,7 +47,7 @@ public struct ___VARIABLE_moduleName___MainDestination {
 }
 
 extension MotherboardType where Self: FlowManageable {
-    public func io___VARIABLE_moduleName___(_ identifier: BoardID = ___VARIABLE_moduleName___MainDestination.defaultIdentifier) -> ___VARIABLE_moduleName___MainDestination {
+    func io___VARIABLE_moduleName___(_ identifier: BoardID = ___VARIABLE_moduleName___MainDestination.defaultIdentifier) -> ___VARIABLE_moduleName___MainDestination {
         ___VARIABLE_moduleName___MainDestination(
             activation: activation(identifier, with: ___VARIABLE_moduleName___Parameter.self),
             interaction: interaction(identifier, with: ___VARIABLE_moduleName___Command.self),
