@@ -19,7 +19,7 @@ TODO: Add long description of the pod here.
   # s.static_framework = true
 
   s.source_files = "Sources/**/*.swift"
-  # s.resources = "Sources/**/*.{xib,storyboard,strings,xcassets}"
+  s.resources = "Sources/**/*.{xib,storyboard,strings,xcassets}"
 
   s.dependency "__DAD__"
 
