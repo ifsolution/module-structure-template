@@ -11,7 +11,7 @@ import Foundation
 
 /// List of provided services here
 public extension __DAD__ServiceMap {
-    var `default`: ___VARIABLE_moduleName___MainDestination {
+    var io___VARIABLE_moduleName___: ___VARIABLE_moduleName___MainDestination {
         mainboard.io___VARIABLE_moduleName___()
     }
 }
