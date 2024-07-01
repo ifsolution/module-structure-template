@@ -11,14 +11,16 @@ import Boardy
 import Foundation
 
 struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
-    var identifier: Boardy.BoardID {
-        service.identifier
-    }
+    /// Each service is equivalent to one entry point
+    enum ServiceType {
+        case `default`
 
-    let service: ___VARIABLE_moduleName___ModulePlugin.ServiceType
-
-    init(service: ___VARIABLE_moduleName___ModulePlugin.ServiceType) {
-        self.service = service
+        var identifier: BoardID {
+            switch self {
+                case .default:
+                    return .pub___VARIABLE_moduleName___
+            }
+        }
     }
 
     func apply(for main: MainComponent) {
@@ -36,16 +38,14 @@ struct ___VARIABLE_moduleName___ModulePlugin: ModulePlugin {
         }
     }
 
-    /// Each service is equivalent to one entry point
-    enum ServiceType {
-        case `default`
+    let service: ___VARIABLE_moduleName___ModulePlugin.ServiceType
 
-        var identifier: BoardID {
-            switch self {
-                case .default:
-                    return .pub___VARIABLE_moduleName___
-            }
-        }
+    init(service: ___VARIABLE_moduleName___ModulePlugin.ServiceType) {
+        self.service = service
+    }
+
+    var identifier: Boardy.BoardID {
+        service.identifier
     }
 }
 
