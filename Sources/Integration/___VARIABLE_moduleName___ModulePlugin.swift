@@ -16,9 +16,8 @@ struct ___VARIABLE_moduleName___ModulePlugin: ModuleBuilderPlugin {
         case `default`
 
         var identifier: BoardID {
-            switch self {
-                case .default:
-                    return .pub___VARIABLE_moduleName___
+            return switch self {
+                case .default: .pub___VARIABLE_moduleName___
             }
         }
     }
