@@ -23,7 +23,10 @@ struct ___VARIABLE_moduleName___ModulePlugin: ModuleBuilderPlugin {
     }
 
     func build(with identifier: Boardy.BoardID, sharedComponent: any Boardy.SharedValueComponent, internalContinuousProducer: any Boardy.ActivatableBoardProducer) -> any Boardy.ActivatableBoard {
-        ___VARIABLE_moduleName___BoardFactory.make(identifier: identifier, producer: internalContinuousProducer)
+        switch service {
+            case .default:
+                ___VARIABLE_moduleName___BoardFactory.make(identifier: identifier, producer: internalContinuousProducer)
+        }
     }
 
     func internalContinuousRegistrations(producer: any Boardy.ActivatableBoardProducer) -> [Boardy.BoardRegistration] {}
