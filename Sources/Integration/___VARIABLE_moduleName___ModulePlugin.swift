@@ -3,7 +3,7 @@
 //  ___VARIABLE_moduleName___
 //
 //  Created by BOARDY on 6/1/21.
-//  Compatible with Boardy 1.56 or later
+//  Compatible with Boardy 1.60 or later
 //
 
 import __DAD__
@@ -29,7 +29,7 @@ struct ___VARIABLE_moduleName___ModulePlugin: ModuleBuilderPlugin {
         }
     }
 
-    func internalContinuousRegistrations(producer: any Boardy.ActivatableBoardProducer) -> [Boardy.BoardRegistration] {}
+    func internalContinuousRegistrations(sharedComponent: any Boardy.SharedValueComponent, producer: any Boardy.ActivatableBoardProducer) -> [Boardy.BoardRegistration] {}
 
     let service: ___VARIABLE_moduleName___ModulePlugin.ServiceType
 
